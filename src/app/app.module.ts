@@ -22,18 +22,16 @@ import {
   HttpErrorResponse,
   HttpHeaders,
 } from "@angular/common/http";
-import { LogComponent } from "./log/log.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { ThreadsComponent } from "./threads/threads.component";
 import { AddThreadComponent } from "./add-thread/add-thread.component";
-import { BoardsComponent } from './boards/boards.component';
+import { BoardsComponent } from "./boards/boards.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LogComponent,
     ThreadsComponent,
     AddThreadComponent,
     BoardsComponent,

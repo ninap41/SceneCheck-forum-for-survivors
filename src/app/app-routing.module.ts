@@ -1,14 +1,13 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
-import { LogComponent } from "./log/log.component";
 import { ThreadsComponent } from "./threads/threads.component";
+import { BoardsComponent } from "./boards/boards.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "thread", component: ThreadsComponent },
-
-  { path: "log", component: LogComponent },
+  { path: "threads", component: ThreadsComponent },
+  { path: "boards", component: BoardsComponent },
 ];
 
 @NgModule({
