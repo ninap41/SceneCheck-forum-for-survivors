@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { StorageService } from "../services/storage.service";
 import { Animate } from "./animations";
 
 @Component({
@@ -9,7 +8,7 @@ import { Animate } from "./animations";
   animations: Animate,
 })
 export class HomeComponent implements OnInit {
-  constructor(public _ls: StorageService) {}
+  constructor() {}
 
   ngOnInit(): void {}
 }
