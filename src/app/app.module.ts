@@ -6,12 +6,7 @@ import { AppComponent } from "./app.component";
 import { AngularDraggableModule } from "angular2-draggable";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AngularEditorModule } from "@kolkov/angular-editor";
-
-import { LogService } from "./services/log.service";
-import { ConfigService } from "./services/config.service";
 import { ThreadsService } from "./services/threads.service";
-
-import { StorageService } from "./services/storage.service";
 import { HomeComponent } from "./home/home.component";
 import { FormBuilder, FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -51,10 +46,7 @@ import { BoardsComponent } from "./boards/boards.component";
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
-    ConfigService,
-    StorageService,
     ThreadsService,
-    LogService,
     FormBuilder,
     HttpClient,
     {
