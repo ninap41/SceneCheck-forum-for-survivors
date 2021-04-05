@@ -1,7 +1,154 @@
-<div class="jumbotron">
-  <h1 class="display-3">Hello Welcome To Storage App</h1>
-  <p class="lead">
-    This is a localStorage boiler app I am going to just be using to build out
-    games and random various FE projects prior to database integration.
-  </p>
+<div class="backdrop" style="">
+  <div class="container">
+    <h1 class="mt-5">
+      <div class="display-1 main-heading">
+        <span class="line-1">NotIn</span><br /><span class="line-2"
+          >OurScene</span
+        >
+      </div>
+    </h1>
+
+    <div class="lead">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <p>
+            The #MeToo phrase was first coined in 2006 by Tarana Burke, an
+            advocate for women in New York. ... Then, in 2017, the phrase was
+            reintroduced by actress Alyssa Milano as a way to encourage women
+            and men to share their stories as part of an anti-sexual harassment
+            movement.
+          </p>
+          <p>
+            During this time, The DIY punk scene was inspired; More abuse and
+            injustice was called out in facebook groups, forums like deadformat,
+            and google docs than ever before. However in 2021, there is no
+            platform for the DIY community I could find where people can protect
+            their communities.
+          </p>
+
+          <p>
+            This is a safe space where users can contribute anonymously and
+            voice their concerns. I'm done with the bullshit. Predators and
+            enablers? Nope, #NotInOurScene.
+          </p>
+
+          <div class="row d-flex justify-content-start">
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-toggle="modal"
+              data-target="#login"
+            >
+              Login
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#signup"
+            >
+              Sign Up
+            </button>
+            <button
+              class="nav-link"
+              class="btn"
+              routerLinkActive="active"
+              [routerLink]="['thread']"
+            >
+              Continue To Threads Any Way
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p>
+            I have been in the music scene for many years and have had to endure
+            the unfortunate power dynamics of being a part of a community that
+            strives for inclusion but is not immune to it's wholly white,
+            heteronormative, male dominated roots. I have had opportunities
+            thrown at me throughout the years. The sad underlying theme of these
+            being from people who had more power than myself, each one with
+            certain implications or coercion, making me feel like my currency
+            for success was not only musical talents, but my sex appeal and
+            body. I have been assaulted in the music scene and seen friends,
+            queer or non, affected.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade bd-example-modal-lg"
+  id="login"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <app-login></app-login>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade bd-example-modal-lg"
+  id="signup"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <app-login></app-login>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

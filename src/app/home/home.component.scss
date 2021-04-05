@@ -1,0 +1,36 @@
+$orange: #f16744;
+$purple: #38042e;
+$light-orange: #ffd4a9;
+$light-purple: #eec7eb;
+$burnt: #350110;
+$cream-green: #dde6cc;
+
+.main-heading {
+  letter-spacing: 0.5rem;
+  line-height: 7rem;
+}
+
+.lead {
+  text-shadow: #350110;
+}
+
+.backdrop {
+  height: 100vh;
+  background: #000000; /* fallback colour. Make sure this is just one solid colour. */
+  background: url("../../assets/fem-back.jpeg");
+  background: linear-gradient(rgb(49, 16, 49), rgb(87, 24, 87)),
+    url("../../assets/fem-back.jpeg"); /* The least supported option. */
+  background-size: cover;
+
+  background-blend-mode: hard-light;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.lead {
+  color: $light-orange;
+  font-weight: 500;
+}

@@ -1,20 +1,68 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
+@font-face {
+  font-family: "barge";
+  src: url(../assets/fonts/barge.otf) format("opentype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@font-face {
+  font-family: "dosomething";
+  src: url(../assets/fonts/dosomething.ttf) format("opentype");
+}
+$orange: #f16744;
+$purple: #38042e;
+$light-orange: #ffd4a9;
+$light-purple: #eec7eb;
+$burnt: #350110;
+$cream-green: #dde6cc;
+
+.title-color {
+  color: $orange;
+}
+
+.line-1 {
+  color: $light-orange;
+}
+.line-2 {
+  color: $orange;
+}
 ul.ba,
 ul > *,
 li {
   list-style-type: none !important;
 }
 
+$orange: #f16744;
+$purple: #38042e;
+$light-orange: #ffd4a9;
+$light-purple: #eec7eb;
+$burnt: #350110;
+$cream-green: #dde6cc;
+$primary: $purple;
+
+h1,
+h2,
+.display-1,
+.display-2,
+.display-3,
+.title-font {
+  font-family: "dosomething";
+}
+
 li > a {
-  color: white;
+  color: white !important;
 }
 
 li > a:hover {
-  color: pink;
+  color: $cream-green;
 }
-#sourceText,
-code {
-  color: rgb(71, 218, 71) !important;
-  background-color: black !important;
+
+.navbar-inner {
+  background-color: transparent !important;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: $primary;
 }

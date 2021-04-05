@@ -1,0 +1,129 @@
+<div class="jumbotron backdrop">
+  <br />
+  <h3 class="">Discuss</h3>
+  {{ threads | json }}
+  <p class="lead">
+    <!-- <span *ngIf="!this.loaded">spinner</span> -->
+    We do not tolerate hate speech, profanity, or bullying towards other users.
+    This is a safe space to share your experiences, both good and bad within the
+    music community.
+  </p>
+
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+
+  <hr class="my-4" />
+
+  <div class="containerrow width-100">
+    <h3>
+      All threads
+
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModalCenter"
+      >
+        Create thread
+      </button>
+    </h3>
+    <table class="table table-striped">
+      <thead>
+        <!-- author: { type: String }, title: { type: String }, tags: { type: Array
+        }, description: { type: Date }, dateCreated: { type: String },
+        lastActive: { type: Date}, topPoster: { type: String }, posts: {
+        type: Array }, -->
+        <tr>
+          <th scope="col">Created</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Last Active</th>
+          <th scope="col">Author</th>
+          <th scope="col">Posts</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let thread of threads">
+        <tr>
+          <th scope="row">{{ thread.dateCreated }}</th>
+
+          <td class="td-title">
+            <a href="" [routerLink]="">{{ thread.title }}</a>
+          </td>
+
+          <td>
+            <i>{{ thread.description || "N/A" }}</i>
+          </td>
+          <td>
+            {{ thread.lastActive || "N/A" }}
+          </td>
+          <td>
+            {{ thread.author || "N/A" }}
+          </td>
+          <td>{{ thread.posts.length }}</td>
+        </tr>
+        <!-- <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade bd-example-modal-lg"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create thread</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          If a thread is inactive for more than 24 hours, it will be deleted.
+          You may not create threads if you are not a member, only reply to them
+          or post.
+        </p>
+        <form>
+          <app-add-thread></app-add-thread>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

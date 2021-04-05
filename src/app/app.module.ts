@@ -5,37 +5,38 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { AngularDraggableModule } from "angular2-draggable";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BlinkService } from "./services/blink.service";
 import { AngularEditorModule } from "@kolkov/angular-editor";
 
-import { MultipleChoiceComponent } from "./multiple-choice/multiple-choice.component";
-import { GameService } from "./services/game.service";
 import { LogService } from "./services/log.service";
 import { ConfigService } from "./services/config.service";
-import { WorldComponent } from "./world/world.component";
+import { ThreadsService } from "./services/threads.service";
+
 import { StorageService } from "./services/storage.service";
 import { HomeComponent } from "./home/home.component";
-import { BagComponent } from "./world/bag/bag.component";
-
 import { FormBuilder, FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import {
   HttpClient,
   HttpHandler,
   HttpClientModule,
+  HttpErrorResponse,
+  HttpHeaders,
 } from "@angular/common/http";
 import { LogComponent } from "./log/log.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
+import { ThreadsComponent } from "./threads/threads.component";
+import { AddThreadComponent } from "./add-thread/add-thread.component";
+import { BoardsComponent } from './boards/boards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MultipleChoiceComponent,
-    WorldComponent,
     HomeComponent,
-    BagComponent,
     LogComponent,
+    ThreadsComponent,
+    AddThreadComponent,
+    BoardsComponent,
   ],
 
   imports: [
@@ -45,7 +46,6 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-
     BrowserAnimationsModule,
     AngularDraggableModule,
     MDBBootstrapModule.forRoot(),
@@ -53,11 +53,9 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
-    BlinkService,
-    GameService,
     ConfigService,
     StorageService,
-
+    ThreadsService,
     LogService,
     FormBuilder,
     HttpClient,
