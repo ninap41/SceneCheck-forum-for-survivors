@@ -1,15 +1,7 @@
-export interface Post {
-  id: string;
-  author: string;
-  content: string;
-  dateCreated: string;
-  replies: Array<Post>;
-  depth: number;
-  upvotes: number;
-}
+import { Post } from "./Post";
 
 export interface Thread {
-  id: string;
+  _id: string;
   author: string;
   title: string;
   tags: Array<string>;

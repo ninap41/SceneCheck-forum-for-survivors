@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { AngularDraggableModule } from "angular2-draggable";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AngularEditorModule } from "@kolkov/angular-editor";
-import { ThreadsService } from "./services/threads.service";
+import { ThreadsService } from "./threads/threads.service";
 import { HomeComponent } from "./home/home.component";
 import { FormBuilder, FormsModule, ReactiveFormsModule } from "@angular/forms";
 
@@ -22,6 +22,8 @@ import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { ThreadsComponent } from "./threads/threads.component";
 import { AddThreadComponent } from "./add-thread/add-thread.component";
 import { BoardsComponent } from "./boards/boards.component";
+import { PostsComponent } from './posts/posts.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { BoardsComponent } from "./boards/boards.component";
     ThreadsComponent,
     AddThreadComponent,
     BoardsComponent,
+    PostsComponent,
+    AboutComponent,
   ],
 
   imports: [

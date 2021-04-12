@@ -8,6 +8,7 @@ var ThreadSchema = new Schema({
   tags: { type: Array, required: false },
   description: { type: String, required: true },
   dateCreated: { type: Date },
+  boardId: { type: String, required: true },
   lastActive: { type: Date, required: false },
   topPoster: { type: String, required: false },
   posts: [{ type: Schema.Types.ObjectId, ref: "Post" }],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ThreadsService } from "../services/threads.service";
+import { ThreadsService } from "../threads/threads.service";
 @Component({
   selector: "app-add-thread",
   templateUrl: "./add-thread.component.html",

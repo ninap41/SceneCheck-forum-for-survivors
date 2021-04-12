@@ -10,24 +10,40 @@ $cream-green: #dde6cc;
   line-height: 7rem;
 }
 
+// .lead {
+//   text-shadow: #350110;
+// }
+
 .backdrop {
-  height: 100vh;
+  height: 100%;
   background: #000000; /* fallback colour. Make sure this is just one solid colour. */
   background: url("../../assets/fem-back.jpeg");
   background: linear-gradient(rgb(49, 16, 49), rgb(87, 24, 87)),
     url("../../assets/fem-back.jpeg"); /* The least supported option. */
   background-size: cover;
-
   background-blend-mode: hard-light;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
 
-.lead {
-  text-shadow: #350110;
-  color: $light-orange;
-  font-weight: 500;
+.text-container {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+// .lead {
+//   color: $light-orange;
+//   font-weight: 500;
+// }
+
+p {
+  font-size: 20px;
 }

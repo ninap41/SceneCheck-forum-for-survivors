@@ -5,21 +5,14 @@ import {
   HttpHeaders,
 } from "@angular/common/http";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
-import {
-  Observable,
-  of,
-  BehaviorSubject,
-  Subject,
-  throwError,
-  pipe,
-} from "rxjs";
+import { Observable, throwError } from "rxjs";
 import { catchError, retry, map } from "rxjs/operators";
-import { Thread } from "../models/thread";
+import { Post } from "../models/post";
 
 @Injectable({
   providedIn: "root",
 })
-export class ThreadsService {
+export class PostsService {
   baseUrl: string = "http://localhost:3000";
   currentPage: string;
   data;
@@ -51,9 +44,9 @@ export class ThreadsService {
     return throwError("Something bad happened; please try again later.");
   }
 
-  public async getThreads(): Promise<any> {
+  public async getPosts(): Promise<any> {
     var data = await this.http
-      .get(this.baseUrl + "/threads/all")
+      .get(this.baseUrl + "/posts/all")
       .toPromise()
       .then((result) => {
         return result;
@@ -62,17 +55,17 @@ export class ThreadsService {
     return this.data;
   }
 
-  public createThread(thread: Thread): Observable<any> {
+  public createPost(post: Post): Observable<any> {
     var url = this.baseUrl + "/api/create";
     return this.http
-      .post<any>(url, thread, this.httpOptions)
+      .post<any>(url, post, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 
-  public deleteThread(thread: Thread): Observable<any> {
-    var url = this.baseUrl + `/api/delete/${thread.id}`;
+  public deletePost(post: Post): Observable<any> {
+    var url = this.baseUrl + `/api/delete/${post._id}`;
     return this.http
-      .post<any>(url, thread, this.httpOptions)
+      .post<any>(url, post, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 }

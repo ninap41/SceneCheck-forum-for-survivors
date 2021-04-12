@@ -6,10 +6,10 @@ var BoardSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
 
-  threads: [{ type: Schema.Types.ObjectId, ref: "Thread" }],
+  // threads: [{ type: Schema.Types.ObjectId, ref: "Thread" }],
 });
-var board = mongoose.model("Board", BoardSchema);
-module.exports = board;
+var boards = mongoose.model("Board", BoardSchema);
+module.exports = boards;
 
 // var sample = {
 //   author: "getem27",

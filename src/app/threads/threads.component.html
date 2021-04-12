@@ -1,7 +1,6 @@
 <div class="jumbotron backdrop">
   <br />
   <h3 class="">Discuss</h3>
-  {{ threads | json }}
   <p class="lead">
     <!-- <span *ngIf="!this.loaded">spinner</span> -->
     We do not tolerate hate speech, profanity, or bullying towards other users.
@@ -9,6 +8,7 @@
     music community.
   </p>
 
+  {{ threads | json }}
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </p>
@@ -17,8 +17,6 @@
 
   <div class="containerrow width-100">
     <h3>
-      All threads
-
       <!-- Button trigger modal -->
       <button
         type="button"
@@ -46,10 +44,15 @@
       </thead>
       <tbody *ngFor="let thread of threads">
         <tr>
-          <th scope="row">{{ thread.dateCreated }}</th>
+          <th scope="row">
+            {{ thread.dateCreated | date: "shortTime" }} <br />
+            {{ thread.dateCreated | date: "mediumDate" }}
+          </th>
 
           <td class="td-title">
-            <a href="" [routerLink]="">{{ thread.title }}</a>
+            <a href="" [routerLink]="['posts', thread.id]">{{
+              thread.title
+            }}</a>
           </td>
 
           <td>
@@ -63,24 +66,6 @@
           </td>
           <td>{{ thread.posts.length }}</td>
         </tr>
-        <!-- <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr> -->
       </tbody>
     </table>
   </div>
